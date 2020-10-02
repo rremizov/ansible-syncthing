@@ -6,7 +6,7 @@ Install [Syncthing](https://syncthing.net/).
 Features
 --------
 
-- Integration with systemd and ufw using original config from the syncthing package.
+- Integration with systemd and ufw using original config from the Syncthing package.
 
 Requirements
 ------------
@@ -23,6 +23,7 @@ Example
 
 ```yaml
     syncthing_ufw_enabled: yes
+    syncthing_ufw_rule_state: enabled
     syncthing_users:
       - user0 
       - user1 

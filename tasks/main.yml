@@ -1,0 +1,36 @@
+---
+- name: Install dependencies
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg2
+      - software-properties-common
+
+- name: Add Syncthings's official GPG key
+  apt_key:
+    url: "{{ syncthing_apt_key_url }}"
+
+- name: Add Syncthing repository
+  apt_repository:
+    repo: "{{ syncthing_apt_repository }}"
+    state: present
+
+- name: Install Syncthing
+  apt:
+    name: syncthing
+    state: present
+  notify:
+    - systemctl daemon-reload
+    - Enable and start Syncthing instances
+
+- name: Allow Syncthing traffic
+  ufw:
+    rule: allow
+    name: syncthing
+    comment: Syncthing
+    state: "{{ syncthing_ufw_rule_state }}"
+  when: syncthing_create_ufw_rule

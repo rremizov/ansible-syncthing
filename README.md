@@ -1,4 +1,4 @@
-Syncthing
+Syncthing ![](https://travis-ci.com/rremizov/ansible-syncthing.svg?branch=master)
 =========
 
 Install [Syncthing](https://syncthing.net/).

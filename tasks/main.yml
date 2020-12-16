@@ -25,7 +25,12 @@
     state: present
   notify:
     - systemctl daemon-reload
-    - Enable and start Syncthing instances
+
+- meta: flush_handlers
+
+- name: Enable and start Syncthing instances
+  systemd: name=syncthing@{{ item }} enabled=yes state=started
+  with_items: "{{ syncthing_users }}"
 
 - name: Allow Syncthing traffic
   ufw:

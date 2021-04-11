@@ -26,7 +26,8 @@
   notify:
     - systemctl daemon-reload
 
-- meta: flush_handlers
+- name: Flush handlers
+  meta: flush_handlers
 
 - name: Enable and start Syncthing instances
   systemd: name=syncthing@{{ item }} enabled=yes state=started

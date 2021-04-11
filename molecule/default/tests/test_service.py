@@ -1,6 +1,6 @@
 import pytest
 
-users = ["syncuser0", "syncuser1"]
+users = ["syncuser0"]
 
 
 @pytest.mark.parametrize("username", users)

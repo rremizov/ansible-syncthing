@@ -5,7 +5,6 @@
   vars:
     syncthing_users:
       - syncuser0
-      - syncuser1
 
   pre_tasks:
     # The Fedora 30+ container images have only C.UTF-8 installed

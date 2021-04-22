@@ -1,5 +1,5 @@
 ansible-lint==5.0.7
-ansible==3.2.0
+ansible==3.3.0
 black==20.8b1
 docker==5.0.0
 isort==5.8.0

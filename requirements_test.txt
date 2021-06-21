@@ -4,4 +4,4 @@ black==21.6b0
 docker==5.0.0
 isort==5.8.0
 molecule[docker]==3.3.4
-pytest-testinfra==6.3.0
+pytest-testinfra==6.4.0

@@ -2,6 +2,7 @@
 - name: Install dependencies
   apt:
     name: "{{ packages }}"
+    update_cache: true
   vars:
     packages:
       - apt-transport-https

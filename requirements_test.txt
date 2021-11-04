@@ -1,6 +1,6 @@
 ansible-lint==5.2.1
 ansible==4.8.0
-black==21.9b0
+black==21.10b0
 docker==5.0.3
 isort==5.10.0
 molecule[docker]==3.5.2

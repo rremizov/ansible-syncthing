@@ -3,5 +3,5 @@ ansible==6.6.0
 black==22.10.0
 docker==6.0.1
 isort==5.10.1
-molecule[docker]==4.0.1
+molecule[docker]==4.0.3
 pytest-testinfra==6.8.0

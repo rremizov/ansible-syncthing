@@ -9,4 +9,3 @@ rules:
 
 ignore: |
   venv
-  tests

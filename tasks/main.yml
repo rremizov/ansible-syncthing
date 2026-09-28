@@ -11,9 +11,18 @@
       - gnupg2
       - software-properties-common
 
-- name: Add Syncthings's official GPG key
-  apt_key:
+- name: Ensure apt keyrings directory exists
+  file:
+    path: /etc/apt/keyrings
+    state: directory
+    mode: '0755'
+
+- name: Add Syncthing GPG key
+  get_url:
     url: "{{ syncthing_apt_key_url }}"
+    dest: /etc/apt/keyrings/syncthing.asc
+    mode: '0644'
+    force: true
 
 - name: Add Syncthing repository
   apt_repository:
